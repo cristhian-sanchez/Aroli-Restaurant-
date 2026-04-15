@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Aroli Restaurant en Pasto, Nariño. Mariscos, pastas, carnes y cócteles en un ambiente elegante. Reservas por WhatsApp.">
+    <title>Aroli Restaurant — Mariscos y Gastronomía en Pasto, Nariño</title>
+
+    <!-- Open Graph (preview en WhatsApp, redes sociales) -->
+    <meta property="og:title" content="Aroli Restaurant — Pasto, Nariño">
+    <meta property="og:description" content="Mariscos, pastas, carnes y cócteles en un ambiente elegante. Reserva tu mesa por WhatsApp.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipOvr_xllj3EBe5YZImxxkbS8KGQuYScXlDy6LwG=s1360-w1360-h1020-rw">
+    <meta property="og:type" content="restaurant">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦞</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="logo.png" alt="Aroli Restaurant">
+        </div>
+        <nav class="nav">
+            <div class="burger" id="mobile-menu" aria-label="Abrir menú" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="hero-content reveal-hero">
+        <span class="hero-eyebrow">Pasto, Nariño</span>
+        <h1>Una experiencia<br><em>gastronómica única</em></h1>
+        <p>Elegancia, sabor y momentos inolvidables en cada visita</p>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn">Ver Menú</a>
+            <a href="#contacto" class="btn-outline">Reservar</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="menu-section" id="menu">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>Nuestro Menú</h2>
+            <p>Selecciona una categoría para explorar</p>
+        </div>
+
+        <!-- FILTROS SCROLLABLES -->
+        <div class="menu-filters reveal">
+            <div class="filters-scroll">
+                <button class="filter-btn active" data-filter="entradas">Entradas</button>
+                <button class="filter-btn" data-filter="medias-porciones">Medias Porciones</button>
+                <button class="filter-btn" data-filter="adicionales">Adicionales</button>
+                <button class="filter-btn" data-filter="mariscos">Mariscos</button>
+                <button class="filter-btn" data-filter="camarones">Camarones y Langostinos</button>
+                <button class="filter-btn" data-filter="pescados">Pescados</button>
+                <button class="filter-btn" data-filter="pastas">Pastas</button>
+                <button class="filter-btn" data-filter="lomo-res">Lomo de Res</button>
+                <button class="filter-btn" data-filter="lomo-cerdo">Lomo de Cerdo</button>
+                <button class="filter-btn" data-filter="pollo">Pollo</button>
+                <button class="filter-btn" data-filter="jugos">Jugos Naturales</button>
+                <button class="filter-btn" data-filter="bebidas-especiales">Bebidas Especiales</button>
+                <button class="filter-btn" data-filter="bebidas-calientes">Bebidas Calientes</button>
+                <button class="filter-btn" data-filter="cervezas">Cervezas</button>
+                <button class="filter-btn" data-filter="postres">Postres</button>
+                <button class="filter-btn" data-filter="vinos">Carta de Vinos</button>
+                <button class="filter-btn" data-filter="cocteles">Cócteles</button>
+            </div>
+        </div>
+
+        <!-- ENTRADAS -->
+        <div class="menu-grid" id="cat-entradas">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://media.mdzol.com/p/d8d4dd1f34a40410a600fe656fe1b33d/adjuntos/373/imagenes/000/088/0000088367/760x0/smart/descubre-como-hacer-patacones-hogao-receta-autentica-y-deliciosa-foto-shutterstock.png" alt="Patacón con hogao" loading="lazy"></div>
+                <div class="menu-content"><h3>Patacón con hogao</h3><span>$20.000</span><p>Trozos de tomate, cebolla y cilantro, reducido en salsa criolla.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://recetas123.net/wp-content/uploads/calamares-fritos-asados.jpg" alt="Calamares al panco" loading="lazy"></div>
+                <div class="menu-content"><h3>Calamares al panco</h3><span>$27.000</span><p>Acompañados con limón y salsa de la casa.</p></div>
+            </div>
+        </div>
+
+        <!-- MEDIAS PORCIONES -->
+        <div class="menu-grid hidden" id="cat-medias-porciones">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://imag.bonviveur.com/servir-el-arroz-con-camarones-colombiano.jpg" alt="Arroz Aroli" loading="lazy"></div>
+                <div class="menu-content"><h3>Medio Arroz Aroli o Arroz con Camarón</h3><span>$50.000</span><p>Frutos del mar, maíz, palmito de cangrejo, corvina, anillos de calamar y camarón, acompañado de patacón, aguacate o ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://assets.elgourmet.com/wp-content/uploads/2024/01/Cazuela-de-mariscos-3-1.jpg" alt="Cazuela de mariscos" loading="lazy"></div>
+                <div class="menu-content"><h3>Medio Cazuela de Mariscos o de Camarón</h3><span>$50.000</span><p>Frutos del mar, pulpo, corvina y anillos de calamar, palmito de cangrejo y camarón, acompañada con patacón, arroz, aguacate o ensalada.</p></div>
+            </div>
+        </div>
+
+        <!-- ADICIONALES -->
+        <div class="menu-grid hidden" id="cat-adicionales">
+            <div class="menu-card reveal"><div class="menu-content"><h3>Adicional de arroz</h3><span>$5.000</span></div></div>
+            <div class="menu-card reveal"><div class="menu-content"><h3>Adicional de ensalada</h3><span>$6.000</span></div></div>
+            <div class="menu-card reveal"><div class="menu-content"><h3>Papa a la francesa</h3><span>$12.000</span></div></div>
+            <div class="menu-card reveal"><div class="menu-content"><h3>Adicional de patacón</h3><span>$12.000</span></div></div>
+            <div class="menu-card reveal"><div class="menu-content"><h3>Desechables</h3><span>$2.000</span></div></div>
+            <div class="menu-note">El servicio de descorche de vino y licor tiene un valor adicional. Consulte con el administrador.</div>
+        </div>
+
+        <!-- MARISCOS -->
+        <div class="menu-grid hidden" id="cat-mariscos">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://img.freepik.com/fotos-premium/langostinos-calamares-marinera-fritos-mix-verduras_1339-174655.jpg" alt="Fritto frutos del mar" loading="lazy"></div>
+                <div class="menu-content"><h3>Fritto frutos del mar</h3><span>$100.000</span><p>Pesca de temporada, camarón y anillos de calamar en diferente tipo de apanado, acompañado con papa a la francesa, patacón o ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.staymag.com/wp-content/uploads/2025/11/risotto-frutti-di-mare-1400x788.jpg" alt="Risotto de mariscos" loading="lazy"></div>
+                <div class="menu-content"><h3>Risotto de mariscos</h3><span>$80.000</span><p>Arroz cremoso con frutos del mar y camarón, lenguas de plátano, queso parmesano y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/189628f077296ed3e50222e4de4cb1a2/Derivates/0d9900ac0bbb5d84f1c0b1d1786f01d73130a0f5.jpg" alt="Cazuela de mariscos" loading="lazy"></div>
+                <div class="menu-content"><h3>Cazuela de mariscos o de camarón</h3><span>$67.000</span><p>Frutos del mar, pulpo, corvina, anillos de calamar, palmito de cangrejo y camarón, acompañada con patacón, arroz, aguacate o ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/0a/f6/a4/que-tal-este-pescado.jpg" alt="Especial Aroli" loading="lazy"></div>
+                <div class="menu-content"><h3>Especial Aroli</h3><span>$150.000</span><p>Carpaccio de jaiba gratinado, langostinos gratinados, camarones a la plancha, langostinos al ajillo, camarones hawaianos y salmón en salsa de la casa.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.laconstanciacolombina.com/wp-content/uploads/2019/10/197.jpg" alt="Cazuela Coconut" loading="lazy"></div>
+                <div class="menu-content"><h3>Cazuela COCONUT de mariscos o camarón</h3><span>$95.000</span><p>Frutos del mar, camarón, langostino, palmito de cangrejo, pulpo, corvina y anillos de calamar, acompañada con patacón, arroz, aguacate o ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://okdiario.com/img/2024/07/03/receta-de-arroz-con-camarones-colombiano.jpg" alt="Arroz Aroli" loading="lazy"></div>
+                <div class="menu-content"><h3>Arroz Aróli o Arroz con Camarones</h3><span>$65.000</span><p>Frutos del mar, maíz, palmito de cangrejo, corvina, anillos de calamar y camarón, acompañado de patacón, aguacate o ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://recetasveganas.net/wp-content/uploads/2019/06/recetas-vegetarianas-faciles-pasta-leche-coco-tomates-secos-salsa4.jpg" alt="Especial de la casa" loading="lazy"></div>
+                <div class="menu-content"><h3>Especial de la casa</h3><span>$90.000</span><p>Pasta en salsa de coco con frutos del mar, camarones al panco, pescado blanco y vino blanco, acompañado con ensalada y patacón.</p></div>
+            </div>
+        </div>
+
+        <!-- CAMARONES Y LANGOSTINOS -->
+        <div class="menu-grid hidden" id="cat-camarones">
+            <div class="menu-price-note">Camarones $67.000 &nbsp;·&nbsp; Langostinos $70.000</div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-t1g6ulzWJznYAwwLCW6kbSqUdTL7mQOMCg&s" alt="Encocados" loading="lazy"></div>
+                <div class="menu-content"><h3>Encocados</h3><p>Salsa de mariscos con coco y salsa bechamel, acompañado con monedas de plátano verde y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cdn.colombia.com/gastronomia/2013/02/12/camarones-al-ajillo-2954.jpg" alt="Al ajillo" loading="lazy"></div>
+                <div class="menu-content"><h3>Al ajillo</h3><p>Salsa a base de ajo con cebolla larga y limón, acompañado con monedas de plátano verde y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.unacolombianaencalifornia.com/wp-content/uploads/2016/02/Ro%CC%81balo-gratinado-con-camarones-e1455165665276.jpg" alt="Gratinados" loading="lazy"></div>
+                <div class="menu-content"><h3>Gratinados</h3><p>Salsa bechamel con tres quesos al horno, acompañado con monedas de plátano verde y ensalada tropical.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.recetassalvador.com/base/stock/Recipe/camarones-picantes/camarones-picantes_web.jpg" alt="Picantes" loading="lazy"></div>
+                <div class="menu-content"><h3>Picantes</h3><p>Salsa con ají picante al gusto, acompañado con monedas de plátano verde y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.cocina-ecuatoriana.com/base/stock/Recipe/camarones-apanados-ecuatorianos/camarones-apanados-ecuatorianos_web.jpg.webp" alt="Apanados" loading="lazy"></div>
+                <div class="menu-content"><h3>Apanados</h3><p>Acompañado con papas a la francesa, salsa de la casa, limón y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://thumbs.dreamstime.com/b/camar%C3%B3n-hawaiano-poke-bowl-con-arroz-y-verduras-plato-de-camarones-hawaianos-org%C3%A1nicos-216500499.jpg" alt="Hawaianos" loading="lazy"></div>
+                <div class="menu-content"><h3>Hawaianos</h3><p>Salsa de piña, durazno y ciruela, enrollados en tocino, acompañado con papas a la francesa y ensalada.</p></div>
+            </div>
+        </div>
+
+        <!-- PESCADOS -->
+        <div class="menu-grid hidden" id="cat-pescados">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKexLrvPhEPF-R0nL2MwgZ2Ee_ZPfJs09XaQ&s" alt="Salmón Aroli" loading="lazy"></div>
+                <div class="menu-content"><h3>Salmón Aróli</h3><span>$68.000</span><p>Salmón en salsa de camarón y coco, gratinado en tres quesos, con papa a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.paulinacocina.net/wp-content/uploads/2022/07/receta-de-salmon-a-la-plancha-con-salsa-agridulce.jpg" alt="Salmón a la plancha" loading="lazy"></div>
+                <div class="menu-content"><h3>Salmón a la plancha</h3><span>$60.000</span><p>Salmón sellado al vino blanco, acompañado con limón, papa a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://static.vecteezy.com/system/resources/previews/047/135/917/non_2x/grilled-salmon-with-bbq-sauce-and-cherry-tomatoes-free-photo.jpg" alt="Salmón BBQ" loading="lazy"></div>
+                <div class="menu-content"><h3>Salmón BBQ maracuyá o tamarindo</h3><span>$65.000</span><p>Salmón en salsa de maracuyá o tamarindo, con papas a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-note">Adición de tres quesos al horno: $11.000</div>
+        </div>
+
+        <!-- PASTAS -->
+        <div class="menu-grid hidden" id="cat-pastas">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTocnT-UeCFm5CnI92RPn7zFsCJMH2AEW60vA&s" alt="Pasta carbonara" loading="lazy"></div>
+                <div class="menu-content"><h3>Pasta a la carbonara</h3><span>$55.000</span><p>Pasta en salsa bechamel con tocino, acompañada con tostada al horno y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cdn0.recetasgratis.net/es/posts/9/2/0/espaguetis_con_camarones_y_crema_56029_orig.jpg" alt="Pasta camarón" loading="lazy"></div>
+                <div class="menu-content"><h3>Pasta en salsa de camarón</h3><span>$60.000</span><p>Pasta en salsa bechamel marinera, con monedas de patacón y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://i.ytimg.com/vi/HNOuukftYno/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBip5c05abB0w8_V0ZRZDvfLzt9jw" alt="Tentación Italiana" loading="lazy"></div>
+                <div class="menu-content"><h3>Tentación Italiana</h3><span>$50.000</span><p>Pasta carbonara cremosa con medallón filet mignon a elección de término y ensalada fresca.</p></div>
+            </div>
+        </div>
+
+        <!-- LOMO DE RES -->
+        <div class="menu-grid hidden" id="cat-lomo-res">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://placeralplato.com/files/2015/11/Lomo-en-salsa-bechamel.jpg" alt="Lomo Aroli" loading="lazy"></div>
+                <div class="menu-content"><h3>Lomo Aróli</h3><span>$68.000</span><p>Lomo en salsa bechamel con camarón, gratinado al horno, con papa a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.unileverfoodsolutions.es/dam/global-ufs/mcos/spain/acm/selling-story-calcmenu/Filet%20Mignon%20con%20salsa%20de%20ajo%20y%20romero%20preview.jpg" alt="Filet mignon" loading="lazy"></div>
+                <div class="menu-content"><h3>Filet mignon</h3><span>$60.000</span><p>Lomo fino término al gusto en salsa bechamel con tocino y champiñones al vino tinto, con papas y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cdn.pixabay.com/photo/2022/05/17/04/51/mix-grill-7201653_640.jpg" alt="Parrilla mixta" loading="lazy"></div>
+                <div class="menu-content"><h3>Parrilla mixta de carnes</h3><span>$65.000</span><p>Lomo ancho, lomo de cerdo y filete de pollo con chimichurri, papas a la francesa y ensalada.</p></div>
+            </div>
+        </div>
+
+        <!-- LOMO DE CERDO -->
+        <div class="menu-grid hidden" id="cat-lomo-cerdo">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://i.ytimg.com/vi/A7diNRl8HoA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDyxL4PfkYG9wDqGaasuBl71ZUavg" alt="Costilla San Louis" loading="lazy"></div>
+                <div class="menu-content"><h3>Costilla San Louis</h3><span>$68.000</span><p>Costilla a la parrilla en salsa tamarindo, maracuyá o BBQ de la casa, con papas y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrillalomo-lomo-hawaiano.jpg" alt="Medallón hawaiano" loading="lazy"></div>
+                <div class="menu-content"><h3>Medallón de cerdo hawaiano o al tamarindo</h3><span>$60.000</span><p>Medallón en salsa de piña, durazno y ciruela, con papas a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://img-global.cpcdn.com/recipes/d391b217790746a7/1200x630cq80/photo.jpg" alt="Medallón gratinado" loading="lazy"></div>
+                <div class="menu-content"><h3>Medallón de cerdo gratinado</h3><span>$60.000</span><p>Medallón en salsa bechamel al horno en tres quesos, con papas a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://comedera.com/wp-content/uploads/sites/9/2021/05/chuletas-de-cerdo-al-horno.jpg" alt="Chuletón de cerdo" loading="lazy"></div>
+                <div class="menu-content"><h3>Chuletón de cerdo</h3><span>$50.000</span><p>Acompañado de chimichurri, tomate, limón, papa a la francesa y ensalada.</p></div>
+            </div>
+        </div>
+
+        <!-- POLLO -->
+        <div class="menu-grid hidden" id="cat-pollo">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://polloseldorado.co/wp-content/uploads/2020/04/Churrasco-de-Pollo-1024x536.webp" alt="Churrasco de pollo" loading="lazy"></div>
+                <div class="menu-content"><h3>Churrasco de pollo</h3><span>$50.000</span><p>Corte churrasco a la parrilla sellado al vino blanco, con chimichurri, papa a la francesa y ensalada.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cdn0.recetasgratis.net/es/posts/3/1/1/pechuga_con_champinones_16113_600.jpg" alt="Filete de pollo" loading="lazy"></div>
+                <div class="menu-content"><h3>Filete de pollo con champiñones gratinado</h3><span>$60.000</span><p>Filete en salsa bechamel gratinado en tres quesos al horno, con papa a la francesa y ensalada.</p></div>
+            </div>
+        </div>
+
+        <!-- JUGOS -->
+        <div class="menu-grid hidden" id="cat-jugos">
+            <div class="menu-price-note">Mora · Fresa · Lulo · Tomate · Guanábana · Mango</div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://kaprichosur.com/wp-content/uploads/2021/02/jugos-agua.jpg" alt="Jugo en agua" loading="lazy"></div>
+                <div class="menu-content"><h3>Jugo en agua</h3><span>$9.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://menu.lucafood.com.co/wp-content/uploads/2024/03/jugo-leche.webp" alt="Jugo en leche" loading="lazy"></div>
+                <div class="menu-content"><h3>Jugo en leche</h3><span>$10.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://resizer.glanacion.com/resizer/v2/-NJKMRYP2RJCRXAMT75BPM5VTUU.jpg?auth=e7b1f4a0a7ceb340ba51abdb3b10803932c6d834ae5f725e511fb3105c01650e&width=768&height=509&quality=70&smart=true" alt="Limonada" loading="lazy"></div>
+                <div class="menu-content"><h3>Limonada</h3><span>$8.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ALUC6BJAVOvjMT5fUcn4YPKUFF8eQSnR3A&s" alt="Jugo naranja" loading="lazy"></div>
+                <div class="menu-content"><h3>Jugo de naranja o tamarindo</h3><span>$15.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBMOCrtoSWzSrhEfbjYfFM67Tg9M3pUzAgFw&s" alt="Frappe mandarina" loading="lazy"></div>
+                <div class="menu-content"><h3>Frappe de mandarina</h3><span>$20.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.tia.com.ec/media/catalog/category/limpiar-agua.jpg" alt="Agua" loading="lazy"></div>
+                <div class="menu-content"><h3>Botella de agua</h3><span>$10.000</span></div>
+            </div>
+        </div>
+
+        <!-- BEBIDAS ESPECIALES -->
+        <div class="menu-grid hidden" id="cat-bebidas-especiales">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://i.ytimg.com/vi/na5VTP2mEek/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDeAPYlkWe-CHF4YTNjy_VUqLB-VA" alt="Limonada al vino" loading="lazy"></div>
+                <div class="menu-content"><h3>Limonada al Vino</h3><span>$18.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://i0.wp.com/www.pasionthermomix.co/wp-content/uploads/2022/05/captura-de-pantalla-2020-12-14-a-las-22-13-27_1.jpg?fit=1256%2C883&ssl=1" alt="Limonada de coco" loading="lazy"></div>
+                <div class="menu-content"><h3>Limonada de Coco</h3><span>$18.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUqANSGX5K_H4nKMbpMFdDwXJ23-9Xd7bJpg&s" alt="Limonada cerezada" loading="lazy"></div>
+                <div class="menu-content"><h3>Limonada Cerezada</h3><span>$18.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbHGpkh3F4xnfiNNpsSqKpiW3RsCiA11v8hw&s" alt="Copa de sangría" loading="lazy"></div>
+                <div class="menu-content"><h3>Copa de sangría</h3><span>$30.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://media-cdn.tripadvisor.com/media/photo-s/1d/f0/87/c9/soda-italiana.jpg" alt="Soda italiana" loading="lazy"></div>
+                <div class="menu-content"><h3>Soda italiana de frutos rojos, amarillos o lychee</h3><span>$20.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://tienda.cristar.com.co/cdn/shop/articles/COPAS-PARA-VINO-BLANCO-1_de37715d-cedf-46b1-9f95-e23235b2085d.jpg?v=1753908276&width=1600" alt="Copa de vino" loading="lazy"></div>
+                <div class="menu-content"><h3>Copa de vino tinto o blanco</h3><span>$20.000</span></div>
+            </div>
+        </div>
+
+        <!-- BEBIDAS CALIENTES -->
+        <div class="menu-grid hidden" id="cat-bebidas-calientes">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://mojo.generalmills.com/api/public/content/0puUHQsloEKGf2K6Dgy4iw_gmi_hi_res_jpeg.jpeg?v=9f666d53&t=16e3ce250f244648bef28c5949fb99ff" alt="Hervidos" loading="lazy"></div>
+                <div class="menu-content"><h3>Hervidos</h3><span>$15.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://carorocco.com/wp-content/uploads/2020/09/Vino-Caliente-Especiado-1-scaled.jpg" alt="Vino caliente" loading="lazy"></div>
+                <div class="menu-content"><h3>Copa de vino caliente</h3><span>$25.000</span></div>
+            </div>
+        </div>
+
+        <!-- CERVEZAS -->
+        <div class="menu-grid hidden" id="cat-cervezas">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://licoresmedellin.com/cdn/shop/files/6-pack-cerveza-corona-extra-330cc6-pack-cerveza-corona-extra-330cccoronalicores-medellin-4246727.jpg?v=1759122749&width=1214" alt="Corona o Stella" loading="lazy"></div>
+                <div class="menu-content"><h3>Corona o Stella Artois</h3><span>$18.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT483MVzIsZoWjs7D-JQwASpsS2138y1ezz-g&s" alt="Club Colombia" loading="lazy"></div>
+                <div class="menu-content"><h3>Club Colombia</h3><span>$14.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://i.ytimg.com/vi/ixtWpLJObbY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAnKBVbPszgK_zFzkhCoAXiNNIo8g" alt="Michelada Corona" loading="lazy"></div>
+                <div class="menu-content"><h3>Michelada Corona</h3><span>$23.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWuEvU7kKo2Q5PAz686hqrPx2_KZbUexVrnQ&s" alt="Michelada Club" loading="lazy"></div>
+                <div class="menu-content"><h3>Michelada Club Colombia</h3><span>$18.000</span></div>
+            </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="menu-grid hidden" id="cat-postres">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/BS7XK3UP25GMJO3G5IXXDXCRCE.png" alt="Brownie con helado" loading="lazy"></div>
+                <div class="menu-content"><h3>Brownie con helado</h3><span>$15.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo131U8yaxavwAtfC9jtkwtg8tIsq5SEt-hw&s" alt="Cheesecake frutos rojos" loading="lazy"></div>
+                <div class="menu-content"><h3>Cheesecake de frutos rojos</h3><span>$14.000</span></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://www.elespectador.com/resizer/v2/3ZPTUVTO35HS7L5KLI3JUYHLN4.jpg?auth=3769318f671714e1e640b17e788a59dde159f6cdd6e01db24a000b9f13798bc0&width=920&height=613&smart=true&quality=60" alt="Cheesecake frutos amarillos" loading="lazy"></div>
+                <div class="menu-content"><h3>Cheesecake de frutos amarillos</h3><span>$14.000</span></div>
+            </div>
+        </div>
+
+        <!-- CARTA DE VINOS -->
+        <div class="menu-grid hidden" id="cat-vinos">
+            <div class="menu-card menu-card--list reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgJ4DjVBL8UI8GkgNeVWaBcZSHa_ANC8OEcQ&s" alt="Vinos" loading="lazy"></div>
+                <div class="menu-content">
+                    <h3>Vinos y Champagnes</h3>
+                    <ul class="price-list">
+                        <li><span>Casillero del Diablo</span><span>$160.000</span></li>
+                        <li><span>Gato Negro blanco</span><span>$120.000</span></li>
+                        <li><span>Gato Negro tinto</span><span>$130.000</span></li>
+                        <li><span>Santa Helena</span><span>$130.000</span></li>
+                        <li><span>J.P. Chenet espumoso</span><span>$180.000</span></li>
+                        <li><span>Finca Las Moras</span><span>$130.000</span></li>
+                        <li><span>Champagne eventos</span><span>$70.000</span></li>
+                        <li><span>Vino fino espumoso</span><span>$90.000</span></li>
+                        <li><span>Quinta Las Cabras</span><span>$90.000</span></li>
+                        <li><span>Vino blanco eventos</span><span>$70.000</span></li>
+                        <li><span>Vino tinto eventos</span><span>$70.000</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-card menu-card--list reveal">
+                <div class="menu-img"><img src="https://arauca.gov.co/backup/images/Noticias_2018/noviembre/depositphotos_110689618-stock-photo-bottles-of-several-whiskey-brands.jpg" alt="Licores" loading="lazy"></div>
+                <div class="menu-content">
+                    <h3>Licores</h3>
+                    <ul class="price-list">
+                        <li><span>Buchanan's 12 años</span><span>$330.000</span></li>
+                        <li><span>Red Label</span><span>$170.000</span></li>
+                        <li><span>Tequila Olmeca</span><span>$180.000</span></li>
+                        <li><span>Don Julio</span><span>$420.000</span></li>
+                        <li><span>Aguardiente Nariño</span><span>$140.000</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- COCTELES -->
+        <div class="menu-grid hidden" id="cat-cocteles">
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpQ6UbicP4u_5LMiu2BUybEPWrf9TQlaYFCw&s" alt="Rosa de fuego" loading="lazy"></div>
+                <div class="menu-content"><h3>Rosa de fuego</h3><span>$25.000</span><p>Ron añejo, hierbabuena, lima y soda.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlpvcnqVZouUfwA0Teanb54HG48j8zn4qqQ&s" alt="Flor de loto" loading="lazy"></div>
+                <div class="menu-content"><h3>Flor de loto</h3><span>$28.000</span><p>Whisky, frutos rojos, soda, limón y tajín.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://cuisinart.com.co/cdn/shop/articles/Cocktail_de_margarita_refrescante_en_casa.jpg?v=1734134933" alt="Margarita" loading="lazy"></div>
+                <div class="menu-content"><h3>Margarita</h3><span>$35.000</span><p>Tequila, sirope, lychee y limón.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6LnPJwzfQmTT2DXCbFIocGwthZsFcPN46AQ&s" alt="Champagne PR" loading="lazy"></div>
+                <div class="menu-content"><h3>Champagne PR</h3><span>$22.000</span><p>J.P. Chenet, frutos morados y lima.</p></div>
+            </div>
+            <div class="menu-card reveal">
+                <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6tNKFHZOc0b4eN8O7wLGWe407fmsjw2DreQ&s" alt="Piña colada" loading="lazy"></div>
+                <div class="menu-content"><h3>Piña colada</h3><span>$25.000</span><p>Ron añejo, piña, leche de coco y crema de coco.</p></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= EXPERIENCIA ================= -->
+<section class="experience-section" id="experiencia">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>La Experiencia</h2>
+            <p>Más que comida, momentos inolvidables</p>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-text reveal">
+                <p>En Aroli Restaurant ofrecemos una experiencia única donde cada detalle está pensado para brindarte comodidad, elegancia y sabor.</p>
+                <p>Nuestro ambiente está diseñado para compartir momentos especiales en pareja, familia o con amigos.</p>
+                <a href="#contacto" class="btn" style="display:inline-block; margin-top:20px;">Reservar mesa</a>
+            </div>
+            <div class="experience-images reveal">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/8d/90/20/experiencia-unica.jpg?w=900&h=500&s=1" alt="Ambiente Aroli" loading="lazy">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/8d/8f/f3/experiencia-unica.jpg?w=900&h=500&s=1" alt="Ambiente Aroli" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="gallery-section" id="galeria">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Galería</h2>
+            <p>Descubre nuestro ambiente</p>
+        </div>
+        <div class="gallery-grid">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOvr_xllj3EBe5YZImxxkbS8KGQuYScXlDy6LwG=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq55WQHrjIVvNtmufGchdGoHegFIWuAxPJoIK2-rfLHEUBS8ckbEzTvoiKoQZyxgbO4Fauljkb6-c9Rc487je4UXkgaWvVcpFzLKrZS8oJ4Od9bIoUXA8Gnsm5ncltdUgJ03HnLOw=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerQtjLV436GNgsjuRqRRpeD6z4MnnlVFyF1dRLO0jvLtBmXKacm8p6kdH7Pcz1IW-oBLukoF4YPCxGcvw71EsiVtnSatUd327a6HYTYCCK6tTehvHMVxUIkxppc1E3lCDqptX7B=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepi9oOzVFpLnqIUXHd-E70hV1ZsuJB-MWNj5dJIsYGmkqgOeWZMe-E1Aa2EZpITsXazy6xD1VEEUXSYhCNB9vl39CO-vU3SNqylU9yckGHm14qOPutRrItV6cQa5GIa9Ealqmq1=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepW7CUnL_4N-pXRCQ-5uByK5ky_GkRu3xS565F8hg6pBAgIl9KnB93R6f6DgNfHr56kQv0WyLHMPHFkTjbhWvVZOm0IOVrFOcKaH4CCDdS1byxXLw6ILQs4nFcgk54ZKYtEZZQz=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoT31CspsqKBtarFZM_B6d_lmXSDrcqFklsKxiSvtgV8hvFqcs7pU3by6LJdCK4_wyxN1Cq5sdmd4Hr7TohSGq4cbPb1CVfcGIt5_cteT0Bc6TsfLeyRw9XRf_rghkzHitarCfO=s1360-w1360-h1020-rw" alt="Aroli Restaurant" loading="lazy" class="reveal">
+        </div>
+    </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Opiniones</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Excelente servicio y comida deliciosa. Sin duda el mejor restaurante de mariscos en Pasto."</p>
+                <span>— Cliente satisfecho</span>
+            </div>
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Ambiente elegante y atención increíble. La cazuela de mariscos es espectacular."</p>
+                <span>— Cliente satisfecho</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section class="contact-section" id="contacto">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>📍 Ubicación</h3>
+                <p>Calle 21 N°33a 07, Pasto, Nariño</p>
+                <h3>🕐 Horario</h3>
+                <p>Martes a Jueves: 12:00–15:00 y 18:30–21:30</p>
+                <p>Viernes a Sábado: 12:00–15:00 y 18:30–22:00</p>
+                <p>Domingo: 12:00–15:00</p>
+                <h3>📞 Teléfono</h3>
+                <p>+57 310 524 1126</p>
+            </div>
+            <div class="contact-actions reveal">
+                <a href="#" class="btn whatsapp-reserva">📲 Reservar por WhatsApp</a>
+                <a href="https://maps.app.goo.gl/SCLJ8P4LGqmfbto18" target="_blank" class="btn-outline">📍 Ver en Google Maps</a>
+                <a href="https://www.instagram.com/arolirestaurantpasto/" target="_blank" class="btn-outline">📸 Ver Instagram</a>
+            </div>
+            <div class="map-container reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.625066521707!2d-77.2802845!3d1.2251226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed47bfb9e3bfd%3A0x6e065a63b1bef34a!2sAroli%20Restaurant!5e0!3m2!1ses!2sco!4v1775107310271!5m2!1ses!2sco"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Ubicación Aroli Restaurant">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Aroli Restaurant</h3>
+                <p>Experiencias gastronómicas únicas en Pasto, Nariño.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/arolirestaurantpasto/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@aroli.restaurant" target="_blank">TikTok</a></li>
+                    <li><a href="https://www.facebook.com/p/Aroli-restaurant-100055303459302/?locale=es_LA" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Aroli Restaurant · Pasto, Nariño</p>
+        </div>
+    </div>
+</footer>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a href="#" class="whatsapp whatsapp-flotante" aria-label="Contactar por WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
