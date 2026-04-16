@@ -734,3 +734,315 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ================= SPLASH SCREEN ================= */
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    background: #0f0f0f;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-inner {
+    text-align: center;
+}
+
+.splash-logo {
+    font-size: 56px;
+    margin-bottom: 12px;
+    animation: splashBounce 0.8s ease forwards;
+}
+
+.splash-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.3s;
+}
+
+.splash-bar {
+    width: 160px;
+    height: 2px;
+    background: #222;
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards 0.5s;
+}
+
+.splash-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--gold);
+    border-radius: 2px;
+    animation: splashLoad 1.2s ease forwards 0.6s;
+}
+
+@keyframes splashBounce {
+    0%   { opacity: 0; transform: scale(0.5); }
+    60%  { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes splashLoad {
+    to { width: 100%; }
+}
+
+/* ================= HERO STATUS ================= */
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-status .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #aaa;
+    flex-shrink: 0;
+}
+
+.hero-status.open .status-dot  { background: #25D366; box-shadow: 0 0 6px #25D366; animation: pulse 2s infinite; }
+.hero-status.closed .status-dot { background: #e74c3c; }
+
+.hero-status.open  .status-text { color: #25D366; }
+.hero-status.closed .status-text { color: #e74c3c; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* ================= HERO SOCIAL PROOF ================= */
+.hero-social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+}
+
+.proof-divider {
+    opacity: 0.4;
+}
+
+/* ================= SPECIALTIES ================= */
+.specialties-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.specialty-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid #2a2a2a;
+    transition: transform 0.35s, box-shadow 0.35s;
+    cursor: default;
+}
+
+.specialty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px var(--gold);
+}
+
+.specialty-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0,0,0,0.8);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+    z-index: 2;
+    backdrop-filter: blur(6px);
+}
+
+.specialty-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.specialty-card:hover img {
+    transform: scale(1.06);
+}
+
+.specialty-info {
+    padding: 20px;
+}
+
+.specialty-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.specialty-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.specialty-price {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .specialties-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= TESTIMONIALS MEJORADOS ================= */
+.testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author-name {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.author-source {
+    font-size: 11px;
+    color: #555;
+    border: 1px solid #333;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= CONTACT STATUS ================= */
+.contact-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+}
+
+.contact-status .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #aaa;
+    flex-shrink: 0;
+}
+
+.contact-status.open .status-dot  { background: #25D366; animation: pulse 2s infinite; }
+.contact-status.closed .status-dot { background: #e74c3c; }
+.contact-status.open  .status-text { color: #25D366; }
+.contact-status.closed .status-text { color: #e74c3c; }
+
+/* ================= WHATSAPP TOOLTIP ================= */
+.whatsapp {
+    position: right;
+    overflow: visible;
+}
+
+.whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: right;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: #fff;
+}
+
+.whatsapp.show-tooltip .whatsapp-tooltip {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-icon { font-size: 22px; }
+}
