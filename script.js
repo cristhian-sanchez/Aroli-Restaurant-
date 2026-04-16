@@ -147,6 +147,12 @@ document.querySelectorAll(".btn").forEach(btn => {
 
 
 // ================= EFECTO APARICIÓN INICIAL =================
+// Fallback de seguridad: ocultar splash máximo a los 3s pase lo que pase
+setTimeout(() => {
+    const splash = document.getElementById("splash");
+    if (splash) splash.classList.add("hidden");
+}, 3000);
+
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 
@@ -212,3 +218,135 @@ function actualizarEstado() {
 }
 
 actualizarEstado();
+
+
+
+
+
+// ================= LIGHTBOX =================
+const galleryImgs = Array.from(document.querySelectorAll(".gallery-img"));
+const lightbox    = document.getElementById("lightbox");
+const lbImg       = document.getElementById("lightbox-img");
+const lbClose     = document.getElementById("lightbox-close");
+const lbPrev      = document.getElementById("lightbox-prev");
+const lbNext      = document.getElementById("lightbox-next");
+const lbCounter   = document.getElementById("lightbox-counter");
+let lbIndex = 0;
+
+function openLightbox(index) {
+    lbIndex = index;
+    lbImg.src = galleryImgs[index].src;
+    lbImg.alt = galleryImgs[index].alt;
+    lbCounter.textContent = `${index + 1} / ${galleryImgs.length}`;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+function lbNavigate(dir) {
+    lbIndex = (lbIndex + dir + galleryImgs.length) % galleryImgs.length;
+    lbImg.style.opacity = "0";
+    setTimeout(() => {
+        lbImg.src = galleryImgs[lbIndex].src;
+        lbImg.style.opacity = "1";
+        lbCounter.textContent = `${lbIndex + 1} / ${galleryImgs.length}`;
+    }, 150);
+}
+
+galleryImgs.forEach((img, i) => {
+    img.addEventListener("click", () => openLightbox(i));
+});
+
+if (lbClose) lbClose.addEventListener("click", closeLightbox);
+if (lbPrev)  lbPrev.addEventListener("click",  () => lbNavigate(-1));
+if (lbNext)  lbNext.addEventListener("click",  () => lbNavigate(1));
+
+if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+}
+
+document.addEventListener("keydown", (e) => {
+    if (!lightbox || !lightbox.classList.contains("active")) return;
+    if (e.key === "Escape")      closeLightbox();
+    if (e.key === "ArrowLeft")   lbNavigate(-1);
+    if (e.key === "ArrowRight")  lbNavigate(1);
+});
+
+
+// ================= BOTÓN COMPARTIR =================
+const shareBtn = document.getElementById("share-btn");
+if (shareBtn) {
+    shareBtn.addEventListener("click", () => {
+        if (navigator.share) {
+            navigator.share({
+                title: "Aroli Restaurant — Pasto, Nariño",
+                text: "¡Descubrí este increíble restaurante de mariscos en Pasto! 🦞",
+                url: window.location.href
+            }).catch(() => {});
+        } else {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                shareBtn.innerHTML = "✅ ¡Link copiado!";
+                setTimeout(() => {
+                    shareBtn.innerHTML = "<span>📤</span> Compartir restaurante";
+                }, 2500);
+            }).catch(() => {
+                window.open(
+                    `https://wa.me/?text=${encodeURIComponent("¡Mira este restaurante en Pasto! " + window.location.href)}`,
+                    "_blank"
+                );
+            });
+        }
+    });
+}
+
+
+// ================= COUNTER ANIMATION (prueba social) =================
+function animateCount(el, target, suffix, duration) {
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+        start += step;
+        if (start >= target) {
+            el.textContent = suffix.replace("{n}", target);
+            clearInterval(timer);
+        } else {
+            el.textContent = suffix.replace("{n}", Math.floor(start));
+        }
+    }, 16);
+}
+
+const proofItems = document.querySelectorAll(".proof-item");
+let countersRun = false;
+
+const heroObs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !countersRun) {
+        countersRun = true;
+        proofItems.forEach(item => {
+            const text = item.textContent;
+            if (text.includes("4.8")) {
+                let v = 0;
+                const t = setInterval(() => {
+                    v = Math.min(v + 0.1, 4.8);
+                    item.textContent = `⭐ ${v.toFixed(1)} en Google`;
+                    if (v >= 4.8) clearInterval(t);
+                }, 40);
+            } else if (text.includes("500")) {
+                let v = 0;
+                const t = setInterval(() => {
+                    v = Math.min(v + 10, 500);
+                    item.textContent = `+${v} clientes felices`;
+                    if (v >= 500) clearInterval(t);
+                }, 20);
+            }
+        });
+    }
+}, { threshold: 0.5 });
+
+const heroContent = document.querySelector(".hero-content");
+if (heroContent) heroObs.observe(heroContent);
