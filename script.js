@@ -149,4 +149,66 @@ document.querySelectorAll(".btn").forEach(btn => {
 // ================= EFECTO APARICIÓN INICIAL =================
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
+
+    // Ocultar splash screen después de 1.8s
+    setTimeout(() => {
+        const splash = document.getElementById("splash");
+        if (splash) splash.classList.add("hidden");
+    }, 1800);
+
+    // Mostrar tooltip WhatsApp después de 6 segundos
+    setTimeout(() => {
+        const whatsapp = document.querySelector(".whatsapp-flotante");
+        if (whatsapp) {
+            whatsapp.classList.add("show-tooltip");
+            setTimeout(() => whatsapp.classList.remove("show-tooltip"), 4000);
+        }
+    }, 6000);
 });
+
+
+// ================= ESTADO ABIERTO / CERRADO =================
+function calcularEstadoRestaurante() {
+    // Horario Aroli: Mar-Jue 12-15 y 18:30-21:30 | Vie-Sab 12-15 y 18:30-22 | Dom 12-15 | Lun cerrado
+    const ahora = new Date();
+    // Colombia UTC-5
+    const utc    = ahora.getTime() + ahora.getTimezoneOffset() * 60000;
+    const col    = new Date(utc - 5 * 3600000);
+    const dia    = col.getDay(); // 0=Dom, 1=Lun ... 6=Sab
+    const horas  = col.getHours() + col.getMinutes() / 60;
+
+    let abierto = false;
+
+    if (dia === 1) {
+        // Lunes cerrado
+        abierto = false;
+    } else if (dia >= 2 && dia <= 4) {
+        // Martes a Jueves
+        abierto = (horas >= 12 && horas < 15) || (horas >= 18.5 && horas < 21.5);
+    } else if (dia === 5 || dia === 6) {
+        // Viernes y Sábado
+        abierto = (horas >= 12 && horas < 15) || (horas >= 18.5 && horas < 22);
+    } else if (dia === 0) {
+        // Domingo
+        abierto = horas >= 12 && horas < 15;
+    }
+
+    return abierto;
+}
+
+function actualizarEstado() {
+    const abierto = calcularEstadoRestaurante();
+    const texto = abierto ? "Abierto ahora" : "Cerrado ahora";
+    const clase = abierto ? "open" : "closed";
+
+    ["hero-status", "contact-status"].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.classList.remove("open", "closed");
+        el.classList.add(clase);
+        const span = el.querySelector(".status-text");
+        if (span) span.textContent = texto;
+    });
+}
+
+actualizarEstado();
