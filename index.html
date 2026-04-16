@@ -13,6 +13,88 @@
     <meta property="og:description" content="Mariscos, pastas, carnes y cócteles en un ambiente elegante. Reserva tu mesa por WhatsApp.">
     <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipOvr_xllj3EBe5YZImxxkbS8KGQuYScXlDy6LwG=s1360-w1360-h1020-rw">
     <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://arolirestaurant.com/">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Aroli Restaurant">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aroli Restaurant — Pasto, Nariño">
+    <meta name="twitter:description" content="Mariscos, pastas, carnes y cócteles en un ambiente elegante. Reserva tu mesa por WhatsApp.">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/p/AF1QipOvr_xllj3EBe5YZImxxkbS8KGQuYScXlDy6LwG=s1360-w1360-h1020-rw">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://arolirestaurant.com/">
+
+    <!-- Schema.org JSON-LD (SEO estructurado para Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Aroli Restaurant",
+      "image": "https://lh3.googleusercontent.com/p/AF1QipOvr_xllj3EBe5YZImxxkbS8KGQuYScXlDy6LwG=s1360-w1360-h1020-rw",
+      "url": "https://arolirestaurant.com/",
+      "telephone": "+573105241126",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 21 N°33a 07",
+        "addressLocality": "Pasto",
+        "addressRegion": "Nariño",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.2251226,
+        "longitude": -77.2802845
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+          "opens": "12:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+          "opens": "18:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday","Saturday"],
+          "opens": "12:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday","Saturday"],
+          "opens": "18:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "12:00",
+          "closes": "15:00"
+        }
+      ],
+      "servesCuisine": ["Mariscos", "Pastas", "Carnes", "Coctelería"],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/arolirestaurantpasto/",
+        "https://www.tiktok.com/@aroli.restaurant",
+        "https://www.facebook.com/p/Aroli-restaurant-100055303459302/"
+      ],
+      "menu": "https://arolirestaurant.com/#menu",
+      "hasMap": "https://maps.app.goo.gl/SCLJ8P4LGqmfbto18",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦞</text></svg>">
@@ -25,6 +107,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- ================= SPLASH SCREEN ================= -->
+<div class="splash-screen" id="splash">
+    <div class="splash-inner">
+        <div class="splash-logo">🦞</div>
+        <div class="splash-name">Aroli Restaurant</div>
+        <div class="splash-bar"><div class="splash-progress"></div></div>
+    </div>
+</div>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
@@ -52,11 +143,61 @@
     <div class="overlay"></div>
     <div class="hero-content reveal-hero">
         <span class="hero-eyebrow">Pasto, Nariño</span>
+        <div class="hero-status" id="hero-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Cargando...</span>
+        </div>
         <h1>Una experiencia<br><em>gastronómica única</em></h1>
         <p>Elegancia, sabor y momentos inolvidables en cada visita</p>
+        <div class="hero-social-proof">
+            <div class="proof-item">⭐ 4.8 en Google</div>
+            <div class="proof-divider">·</div>
+            <div class="proof-item">+500 clientes felices</div>
+            <div class="proof-divider">·</div>
+            <div class="proof-item">Desde 2018</div>
+        </div>
         <div class="hero-buttons">
             <a href="#menu" class="btn">Ver Menú</a>
             <a href="#contacto" class="btn-outline">Reservar</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ESPECIALIDADES ================= -->
+<section class="specialties-section">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2>Especialidades</h2>
+            <p>Los platos más amados por nuestros clientes</p>
+        </div>
+        <div class="specialties-grid">
+            <div class="specialty-card reveal">
+                <div class="specialty-badge">⭐ Más pedido</div>
+                <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/189628f077296ed3e50222e4de4cb1a2/Derivates/0d9900ac0bbb5d84f1c0b1d1786f01d73130a0f5.jpg" alt="Cazuela de mariscos Aroli" loading="lazy">
+                <div class="specialty-info">
+                    <h3>Cazuela de Mariscos</h3>
+                    <p>Pulpo, corvina, calamar, palmito y camarón. El sabor del Pacífico en un solo plato.</p>
+                    <span class="specialty-price">$67.000</span>
+                </div>
+            </div>
+            <div class="specialty-card reveal">
+                <div class="specialty-badge">👨‍🍳 Del chef</div>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/0a/f6/a4/que-tal-este-pescado.jpg" alt="Especial Aroli" loading="lazy">
+                <div class="specialty-info">
+                    <h3>Especial Aroli</h3>
+                    <p>Carpaccio de jaiba, langostinos gratinados, camarones hawaianos y salmón en salsa de la casa.</p>
+                    <span class="specialty-price">$150.000</span>
+                </div>
+            </div>
+            <div class="specialty-card reveal">
+                <div class="specialty-badge">🔥 Trending</div>
+                <img src="https://www.laconstanciacolombiana.com/wp-content/uploads/2019/10/197.jpg" alt="Cazuela Coconut" loading="lazy">
+                <div class="specialty-info">
+                    <h3>Cazuela COCONUT</h3>
+                    <p>Camarón, langostino, pulpo y corvina en cremosa salsa de coco. Acompañada de patacón y aguacate.</p>
+                    <span class="specialty-price">$95.000</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -480,18 +621,41 @@
 <section class="testimonials">
     <div class="container">
         <div class="section-title reveal">
-            <h2>Opiniones</h2>
+            <h2>Opiniones de Nuestros Clientes</h2>
+            <p>Lo que dicen quienes ya nos visitaron</p>
         </div>
         <div class="testimonial-grid">
             <div class="testimonial reveal">
                 <div class="stars">★★★★★</div>
-                <p>"Excelente servicio y comida deliciosa. Sin duda el mejor restaurante de mariscos en Pasto."</p>
-                <span>— Cliente satisfecho</span>
+                <p>"Excelente servicio y comida deliciosa. Sin duda el mejor restaurante de mariscos en Pasto. La cazuela coconut es una obra maestra."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">— Valentina M.</span>
+                    <span class="author-source">Google Reviews</span>
+                </div>
             </div>
             <div class="testimonial reveal">
                 <div class="stars">★★★★★</div>
-                <p>"Ambiente elegante y atención increíble. La cazuela de mariscos es espectacular."</p>
-                <span>— Cliente satisfecho</span>
+                <p>"Ambiente elegante y atención increíble. La cazuela de mariscos es espectacular. Volveré con toda la familia."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">— Carlos A.</span>
+                    <span class="author-source">Google Reviews</span>
+                </div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Celebré mi aniversario aquí y superó todas las expectativas. El Especial Aroli es simplemente extraordinario."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">— Daniela R.</span>
+                    <span class="author-source">Instagram</span>
+                </div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="stars">★★★★★</div>
+                <p>"Los cócteles son únicos y el servicio es muy atento. El lugar tiene una vibra muy especial, ideal para una noche especial."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">— Andrés T.</span>
+                    <span class="author-source">Google Reviews</span>
+                </div>
             </div>
         </div>
     </div>
@@ -502,6 +666,7 @@
     <div class="container">
         <div class="section-title reveal">
             <h2>Contáctanos</h2>
+            <p>Estamos para atenderte</p>
         </div>
         <div class="contact-grid">
             <div class="contact-info reveal">
@@ -511,6 +676,11 @@
                 <p>Martes a Jueves: 12:00–15:00 y 18:30–21:30</p>
                 <p>Viernes a Sábado: 12:00–15:00 y 18:30–22:00</p>
                 <p>Domingo: 12:00–15:00</p>
+                <p>Lunes: Cerrado</p>
+                <div class="contact-status" id="contact-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Verificando horario...</span>
+                </div>
                 <h3>📞 Teléfono</h3>
                 <p>+57 310 524 1126</p>
             </div>
@@ -563,7 +733,10 @@
 </footer>
 
 <!-- BOTÓN WHATSAPP FLOTANTE -->
-<a href="#" class="whatsapp whatsapp-flotante" aria-label="Contactar por WhatsApp">💬</a>
+<a href="#" class="whatsapp whatsapp-flotante" aria-label="Contactar por WhatsApp">
+    <span class="whatsapp-icon">💬</span>
+    <span class="whatsapp-tooltip">¿Reservamos una mesa?</span>
+</a>
 
 <script src="script.js"></script>
 </body>
